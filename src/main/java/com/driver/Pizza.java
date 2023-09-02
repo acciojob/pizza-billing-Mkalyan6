@@ -25,30 +25,36 @@ public class  Pizza {
 
     public void addExtraCheese() {
         // your code goes here
-        if (!isExtraCheese) {
-            price += 80;
-            isExtraCheese = true;
+        if (!IsBillGen) {
+            if (!isExtraCheese) {
+                price += 80;
+                isExtraCheese = true;
+            }
         }
     }
 
     public void addExtraToppings() {
         // your code goes here
-        if (!isExtraTopping) {
-            if (isVeg) {
-                price += 70;
-            } else {
-                price += 120;
+        if(!IsBillGen) {
+            if (!isExtraTopping) {
+                if (isVeg) {
+                    price += 70;
+                } else {
+                    price += 120;
+                }
+                isExtraTopping = true;
             }
-            isExtraTopping = true;
         }
 
     }
 
     public void addTakeaway() {
-        // your code goes here
-        if (!BagOrdered) {
-            price += 20;
-            BagOrdered = true;
+        if(!IsBillGen) {
+            // your code goes here
+            if (!BagOrdered) {
+                price += 20;
+                BagOrdered = true;
+            }
         }
     }
 
