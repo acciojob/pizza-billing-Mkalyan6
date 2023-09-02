@@ -75,9 +75,9 @@ public class  Pizza {
                    System.out.println("Paperbag Added: 20");
                }
                IsBillGen = true;
-               return bill = "Total Price:" + price;
            }
-           return "";
+               return bill = "Total Price:" + price;
+
     }
 
 }
