@@ -76,7 +76,7 @@ public class  Pizza {
                }
                IsBillGen = true;
            }
-               return bill = "Total Price:" + price;
+               return bill = "Total Price: " + price;
 
     }
 
