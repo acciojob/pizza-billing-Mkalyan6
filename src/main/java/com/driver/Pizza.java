@@ -14,9 +14,11 @@ public class  Pizza {
     public Pizza(Boolean isVeg) {
         this.isVeg = isVeg;
         // your code goes here
-        if (isVeg) price = 300;
-        else price = 400;
-
+        if (isVeg) {
+            price = 300;
+        }else{
+            price=400;
+        }
     }
 
     public int getPrice() {
@@ -25,7 +27,7 @@ public class  Pizza {
 
     public void addExtraCheese() {
         // your code goes here
-        if (!IsBillGen) {
+        if (IsBillGen==false) {
             if (!isExtraCheese) {
                 price += 80;
                 isExtraCheese = true;
@@ -60,29 +62,26 @@ public class  Pizza {
 
     public String getBill() {
         // your code goes here
+         if(IsBillGen)return bill;
                 // first check for veg or not
-//           if(!IsBillGen) {
-               if (isVeg) {
-                   System.out.println("Base Price Of The Pizza: 300");
-               } else {
-                   System.out.println("Base Price Of The Pizza: 400");
-               }
+         if(isVeg)bill="Base Price Of The Pizza: 300\n";
+         else {bill="Base Price Of The Pizza: 400\n";}
                if (isExtraCheese) {
-                   System.out.println("Extra Cheese Added: 80");
+                   bill+="Extra Cheese Added: 80\n";
                }
                if (isExtraTopping) {
                    if (isVeg) {
-                       System.out.println("Extra Toppings Added: 70");
+                    bill+="Extra Toppings Added: 70\n";
                    } else {
-                       System.out.println("Extra Toppings Added: 120");
+                       bill+="Extra Toppings Added: 120\n";
                    }
                }
                if (BagOrdered) {
-                   System.out.println("Paperbag Added: 20");
+                   bill+="Paperbag Added: 20\n";
                }
                IsBillGen = true;
 //           }
-               return bill = "Total Price: " + price;
+               return bill+= "Total Price: " + price +"\n";
 
     }
 
