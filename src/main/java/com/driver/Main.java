@@ -14,7 +14,6 @@ public class Main {
     p.addExtraToppings();
     p.addTakeaway();
     System.out.println(p.getBill());
-    System.out.println(p.getBill());
 
   }
 }

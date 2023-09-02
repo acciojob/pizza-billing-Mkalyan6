@@ -54,7 +54,6 @@ public class  Pizza {
 
     public String getBill() {
         // your code goes here
-        if(IsBillGen) return bill;
 
             // first check for veg or not
             if (isVeg) {
