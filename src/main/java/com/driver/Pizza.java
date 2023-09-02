@@ -55,7 +55,7 @@ public class  Pizza {
     public String getBill() {
         // your code goes here
                 // first check for veg or not
-           if(!IsBillGen) {
+//           if(!IsBillGen) {
                if (isVeg) {
                    System.out.println("Base Price Of The Pizza: 300");
                } else {
@@ -75,7 +75,7 @@ public class  Pizza {
                    System.out.println("Paperbag Added: 20");
                }
                IsBillGen = true;
-           }
+//           }
                return bill = "Total Price: " + price;
 
     }
