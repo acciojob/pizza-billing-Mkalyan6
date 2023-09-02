@@ -54,28 +54,30 @@ public class  Pizza {
 
     public String getBill() {
         // your code goes here
-
-            // first check for veg or not
-            if (isVeg) {
-                System.out.println("Base Price Of The Pizza: 300");
-            } else {
-                System.out.println("Base Price Of The Pizza: 400");
-            }
-           if(isExtraCheese){
-               System.out.println("Extra Cheese Added: 80");
-           }
-           if(isExtraTopping){
-               if(isVeg){
-                   System.out.println("Extra Toppings Added: 70");
-               }else{
-                   System.out.println("Extra Toppings Added: 120");
+                // first check for veg or not
+           if(!IsBillGen) {
+               if (isVeg) {
+                   System.out.println("Base Price Of The Pizza: 300");
+               } else {
+                   System.out.println("Base Price Of The Pizza: 400");
                }
+               if (isExtraCheese) {
+                   System.out.println("Extra Cheese Added: 80");
+               }
+               if (isExtraTopping) {
+                   if (isVeg) {
+                       System.out.println("Extra Toppings Added: 70");
+                   } else {
+                       System.out.println("Extra Toppings Added: 120");
+                   }
+               }
+               if (BagOrdered) {
+                   System.out.println("Paperbag Added: 20");
+               }
+               IsBillGen = true;
+               return bill = "Total Price:" + price;
            }
-           if(BagOrdered){
-               System.out.println("Paperbag Added: 20");
-           }
-           IsBillGen=true;
-           return bill="Total Price:" +price;
+           return "";
     }
 
 }
